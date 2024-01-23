@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload and Chat Application</title>
+    <script>
+        function uploadFile() {
+            var fileInput = document.getElementById('file');
+            var file = fileInput.files[0];
+            var formData = new FormData();
+            formData.append('file', file);
+
+            // Send the file to the server using AJAX or fetch
+            // Write your own code to handle the uploaded file on the server-side
+        }
+
+        function sendMessage() {
+            var messageInput = document.getElementById('message');
+            var message = messageInput.value;
+
+            // Send the message to the server using AJAX or fetch
+            // Write your own code to handle the chat messages on the server-side
+
+            // Clear the input field
+            messageInput.value = '';
+        }
+    </script>
+</head>
+<body>
+    <h2>Upload File</h2>
+    <input type="file" id="file">
+    <button onclick="uploadFile()">Upload</button>
+
+    <h2>Chat</h2>
+    <div id="chatbox">
+        <!-- Display chat messages here -->
+    </div>
+    <input type="text" id="message" placeholder="Type your message">
+    <button onclick="sendMessage()">Send</button>
+</body>
+</html>
